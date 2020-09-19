@@ -1,0 +1,68 @@
+.homeContainer {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.homeContainer .dataTable {
+  width: 35%;
+  height: 100%;
+  background: #ccc;
+  border: 1px solid black;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.homeContainer table {
+  width: 75%;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.homeContainer table td {
+  padding: 0.5rem;
+}
+
+.homeContainer .key {
+  text-transform: capitalize;
+}
+
+.homeForm {
+  display: flex;
+  flex-direction: column;
+  width: 75%;
+  margin-bottom: 1.25rem;
+}
+
+.homeForm h2 {
+  align-self: center;
+}
+
+.homeForm label {
+  font-size: 1.5rem;
+}
+
+.homeForm input {
+  font-size: 1.25rem;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.homeForm .btn {
+  width: 50%;
+}
+
+.hidden {
+  display: none;
+}
+
+.homeContainer .logoutBtn {
+  margin-top: 1.25rem;
+}

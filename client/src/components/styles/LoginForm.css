@@ -1,0 +1,49 @@
+.loginContainer {
+  width: 40%;
+  background: #ccc;
+  border: 1px solid #000;
+  border-radius: 10px;
+  padding: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.loginContainer h2 {
+  margin-bottom: 2rem;
+}
+
+.loginContainer form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 90%;
+  width: 80%;
+}
+
+.loginContainer form label {
+  font-size: 1.25rem;
+  padding-bottom: 0.5rem;
+}
+
+.loginContainer form input {
+  padding: 10px;
+  font-size: 1.1rem;
+  width: calc(100% - 24px);
+}
+
+.loginContainer form input:first-of-type {
+  margin-bottom: 1rem;
+}
+
+.loginContainer form .btn {
+  margin-top: 2rem;
+  width: 50%;
+}
+
+.authError {
+  color: red;
+  font-size: 1rem;
+  font-weight: bold;
+}

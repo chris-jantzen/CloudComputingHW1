@@ -1,0 +1,57 @@
+form.signupForm {
+  width: 75%;
+  border: 1px solid black;
+  background: #ccc;
+  padding: 2rem;
+  border-radius: 10px;
+}
+
+form .mainContainer,
+form .secondaryContainer {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 3rem;
+}
+
+form .mainContainer label,
+form .secondaryContainer label {
+  font-size: 1.25rem;
+  padding-bottom: 0.5rem;
+}
+
+form .mainContainer input,
+form .secondaryContainer input {
+  padding: 10px;
+  font-size: 1.1rem;
+}
+
+form .mainContainer input:first-of-type {
+  margin-bottom: 1rem;
+}
+
+form .secondaryContainer input:not(:last-of-type) {
+  margin-bottom: 1rem;
+}
+
+form .secondaryContainer .nameGroup {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.nameGroup .fname,
+.nameGroup .lname {
+  display: flex;
+  flex-direction: column;
+  width: 48%;
+  margin-bottom: 1rem;
+}
+
+.btn {
+  background: #1985a1;
+  font-size: 1.25rem;
+  border: none;
+  color: #fff;
+  padding: 0.6rem 1.25rem;
+  cursor: pointer;
+}
