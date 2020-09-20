@@ -7,13 +7,6 @@ const user = require('./models/user')
 const app = express()
 
 app.use(express.json())
-// app.use(
-//   cors({
-//     origin: 'localhost:3000',
-//     'Access-Control-Allow-Origin': 'localhost:3000',
-//     credentials: false,
-//   }) // TODO: Change to EC2 url
-// )
 app.use((req, res, next) => {
   // console.log(Object.keys(req))
   // console.log(req.headers)
