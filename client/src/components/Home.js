@@ -7,7 +7,7 @@ import FileUpload from './FileUpload'
 
 const Home = () => {
   const history = useHistory()
-  const { user } = useContext(UserContext)
+  const { user, logoutUser } = useContext(UserContext)
   const [fileUpload, setFileUpload] = useState(<></>)
   const [view, setView] = useState(<tr></tr>)
   useEffect(() => {
@@ -25,6 +25,7 @@ const Home = () => {
   }, [user])
 
   const logout = () => {
+    logoutUser()
     history.push('/')
   }
 

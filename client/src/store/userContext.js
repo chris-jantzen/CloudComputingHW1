@@ -3,6 +3,7 @@ import React, { createContext, useReducer } from 'react'
 export const UserContext = createContext()
 
 const CREATE_USER = 'CREATE_USER'
+const LOGOUT_USER = 'LOGOUT_USER'
 
 const userReducer = (state, action) => {
   switch (action.type) {
@@ -16,6 +17,12 @@ const userReducer = (state, action) => {
       return {
         ...action.payload,
       }
+    case LOGOUT_USER:
+      localStorage.setItem('username', undefined)
+      localStorage.setItem('password', undefined)
+      localStorage.setItem('firstName', undefined)
+      localStorage.setItem('lastName', undefined)
+      localStorage.setItem('email', undefined)
     default:
       return state
   }
@@ -34,6 +41,10 @@ const UserContextProvider = (props) => {
 
   const createUser = (userInput) => {
     dispatch({ type: CREATE_USER, payload: userInput })
+  }
+
+  const logoutUser = () => {
+    dispatch({ type: LOGOUT_USER })
   }
 
   const getPrimaryInfo = () => {
