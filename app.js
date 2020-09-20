@@ -16,6 +16,7 @@ app.use((req, res, next) => {
     'Access-Control-Allow-Headers',
     'Access-Control-Allow-Origin, Content-Type, Accept, Accept-Language, Origin, User-Agent'
   )
+  console.log('APP MIDDLEWARE')
   if (req.method === 'OPTIONS') {
     res.sendStatus(204)
   } else {
@@ -33,6 +34,7 @@ mongoose
   .catch((err) => console.error(err.message))
 
 app.post('/user/createUser', (req, res) => {
+  console.log('IN THE CREATE USER ROUTE')
   const userInfo = req.body.user
   new User(userInfo).save((err, user) => {
     return err
