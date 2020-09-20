@@ -18,11 +18,11 @@ const userReducer = (state, action) => {
         ...action.payload,
       }
     case LOGOUT_USER:
-      localStorage.setItem('username', undefined)
-      localStorage.setItem('password', undefined)
-      localStorage.setItem('firstName', undefined)
-      localStorage.setItem('lastName', undefined)
-      localStorage.setItem('email', undefined)
+      localStorage.removeItem('username')
+      localStorage.removeItem('password')
+      localStorage.removeItem('firstName')
+      localStorage.removeItem('lastName')
+      localStorage.removeItem('email')
       break
     default:
       return state
