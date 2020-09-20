@@ -16,12 +16,18 @@
   padding: 0.5rem 1rem;
   background: #f0f0f0;
   cursor: pointer;
+  height: 100%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .uploadFileSection input {
   font-size: 1rem;
   padding: 0.5rem 1rem;
   border: 0px;
+  height: 100%;
 }
 
 .fileUploadContainer a {
@@ -37,4 +43,12 @@
 
 .fileUploadContainer #fileName {
   cursor: default;
+}
+
+@media screen and (max-width: 1000px) {
+  .uploadFileSection label,
+  .uploadFileSection input {
+    font-size: 0.75rem;
+    box-sizing: border-box;
+  }
 }

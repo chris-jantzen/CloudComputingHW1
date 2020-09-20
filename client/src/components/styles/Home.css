@@ -66,3 +66,9 @@
 .homeContainer .logoutBtn {
   margin-top: 1.25rem;
 }
+
+@media screen and (max-width: 1000px) {
+  .homeContainer table {
+    font-size: 1rem;
+  }
+}
