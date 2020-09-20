@@ -84,7 +84,7 @@ const FileUpload = ({ userId }) => {
           type='text'
           name='fileName'
           id='fileName'
-          onChange={(e) => {}}
+          onChange={() => {}}
           value={fileLength ? `${fileLength} words` : ''}
         />
       </div>
