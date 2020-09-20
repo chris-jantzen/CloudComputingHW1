@@ -23,6 +23,7 @@ const userReducer = (state, action) => {
       localStorage.setItem('firstName', undefined)
       localStorage.setItem('lastName', undefined)
       localStorage.setItem('email', undefined)
+      break
     default:
       return state
   }
@@ -47,15 +48,8 @@ const UserContextProvider = (props) => {
     dispatch({ type: LOGOUT_USER })
   }
 
-  const getPrimaryInfo = () => {
-    const { firstName, lastName, email } = user
-    return { firstName, lastName, email }
-  }
-
   return (
-    <UserContext.Provider
-      value={{ user, dispatch, createUser, getPrimaryInfo }}
-    >
+    <UserContext.Provider value={{ user, dispatch, createUser, logoutUser }}>
       {props.children}
     </UserContext.Provider>
   )
