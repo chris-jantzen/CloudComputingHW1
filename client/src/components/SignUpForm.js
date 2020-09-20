@@ -1,9 +1,11 @@
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
 import { useHistory } from 'react-router-dom'
 import axios from 'axios'
+import { UserContext } from '../store/userContext'
 import './styles/SignUpForm.css'
 
 const SignUpForm = () => {
+  const { createUser } = useContext(UserContext)
   const [username, setUsername] = useState('')
   const [password, setPassword] = useState('')
   const [firstName, setFirstName] = useState('')
@@ -33,6 +35,13 @@ const SignUpForm = () => {
         lastName,
         email,
       },
+    })
+    createUser({
+      username,
+      password,
+      firstName,
+      lastName,
+      email,
     })
     clearStates()
     history.push({ pathname: '/home' })
