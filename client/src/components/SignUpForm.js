@@ -27,7 +27,7 @@ const SignUpForm = () => {
 
   const onSubmit = (e) => {
     e.preventDefault()
-    axios.post('/user/createUser', {
+    axios.post('http://ec2-18-218-112-28.us-east-2.compute.amazonaws.com:5000/user/createUser', {
       user: {
         username,
         password,

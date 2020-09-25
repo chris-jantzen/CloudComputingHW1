@@ -12,7 +12,7 @@ const Home = () => {
   const [view, setView] = useState(<tr></tr>)
   useEffect(() => {
     axios
-      .post('/user/getUser', {
+      .post('http://ec2-18-218-112-28.us-east-2.compute.amazonaws.com:5000/user/getUser', {
         searchProps: {
           username: user.username,
           password: user.password,

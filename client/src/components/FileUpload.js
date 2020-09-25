@@ -10,7 +10,7 @@ const FileUpload = ({ userId }) => {
 
   useEffect(() => {
     axios
-      .post('/file/getFile', {
+      .post('http://ec2-18-218-112-28.us-east-2.compute.amazonaws.com:5000/file/getFile', {
         userId,
       })
       .then((payload) => {
@@ -38,7 +38,7 @@ const FileUpload = ({ userId }) => {
         .filter((word) => word).length
       try {
         if (fileName) {
-          await axios.put('/file/replaceFile', {
+          await axios.put('http://ec2-18-218-112-28.us-east-2.compute.amazonaws.com:5000/file/replaceFile', {
             userId,
             file: {
               name,
@@ -47,7 +47,7 @@ const FileUpload = ({ userId }) => {
             },
           })
         } else {
-          await axios.post('/file/uploadFile', {
+          await axios.post('http://ec2-18-218-112-28.us-east-2.compute.amazonaws.com:5000/file/uploadFile', {
             file: {
               userId,
               name: name,

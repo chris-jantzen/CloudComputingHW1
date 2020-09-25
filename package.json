@@ -6,12 +6,15 @@
   "scripts": {
     "start": "concurrently \"npm run client\" \"npm run serve\"",
     "client": "npm run start --prefix client",
-    "serve": "nodemon app.js"
+    "prodClient": "npm run prod --prefix client",
+    "serve": "nodemon app.js",
+    "prod": "concurrently \"npm run prodClient\" \"npm run serve\""
   },
   "author": "",
   "license": "MIT",
   "dependencies": {
     "concurrently": "^5.3.0",
+    "cors": "^2.8.5",
     "express": "^4.17.1",
     "mongoose": "^5.10.5",
     "nodemon": "^2.0.4"
